@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  template: `
+    Szia {{city}}, {{2+3}}!
+  `,
+  styles: `
+    :host {
+      color: #a144eb;
+    }
+  `,
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Béla';
+  city ='San Francisco';
 }
